@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Showcase</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Navbar Animation */
+        .navbar-collapse {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.4s ease-in-out;
+        }
+
+        .navbar-collapse.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Toggler button animation */
+        .navbar-toggler.collapsed {
+            transform: rotate(0deg);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-toggler:not(.collapsed) {
+            transform: rotate(90deg);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Navbar Hover Effect */
+        .navbar-dark.bg-dark:hover {
+            background-color: #343a40 !important; /* Darker on hover */
+            cursor: pointer;
+        }
+
+        /* Interactive Button Style */
+        .btn-footer {
+            margin-top: 15px;
+            background-color: #007bff; /* Button color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Button Hover Effect */
+        .btn-footer:hover {
+            background-color: #0056b3; /* Darker blue */
+            transform: scale(1.05);
+        }
+
+        /* Button Active Effect */
+        .btn-footer:active {
+            background-color: #003f7f;
+            transform: scale(0.98);
+        }
+
+        /* Button Focus Effect */
+        .btn-footer:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Hidden content to show when button is clicked */
+        #more-info {
+            display: none;
+            padding: 10px;
+            background-color: #333;
+            margin-top: 15px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        /* Footer Hover Effect */
+        footer:hover {
+            background-color: #444;
+            cursor: pointer;
+        }
+
+        /* Section styling */
+        section {
+            padding: 50px 0;
+        }
+
+        /* About Section Layout */
+        #about .col-md-4 h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        #about ul li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Smooth Scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My CV</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="p-5 text-center bg-light">
+        <h2>Welcome!</h2>
+        <p>Hello, I'm Ryan Isidore P. Tabios</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="p-5 bg-white">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>Elementary: Sampaguita Village Elementary School</li>
+                        <li>High School: Sampaguita Village National High School</li>
+                        <li>Senior High School: Lyceum Of Alabang</li>
+                        <li>College: Lyceum Of Alabang</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>School Activities</h3>
+                    <ul>
+                        <li>Sports Varsity</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Driving</li>
+                        <li>Work Ethic</li>
+                        <li>Teamwork</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-5 bg-light">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="subject" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-success" onclick="showHobbies()">Show Hobbies</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Show more info when the button or footer is clicked
+        function showMoreInfo() {
+            var moreInfo = document.getElementById("more-info");
+            if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                moreInfo.style.display = "block";
+            } else {
+                moreInfo.style.display = "none";
+            }
+        }
+
+        // Function for showing hobbies
+        function showHobbies() {
+            alert('Here are some of my hobbies: Coding, Basketball, Traveling, and Reading!');
+        }
+    </script>
+</body>
+</html>
