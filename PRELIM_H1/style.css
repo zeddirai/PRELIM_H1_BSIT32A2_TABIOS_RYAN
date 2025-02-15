@@ -1,0 +1,106 @@
+/* Interactive Button Style */
+.btn-footer {
+    margin-top: 15px;
+    background-color: transparent; /* Transparent background */
+    color: #007bff; /* Blue text color */
+    border: 2px solid #007bff; /* Blue border */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for all effects */
+}
+
+/* Button Hover Effect */
+.btn-footer:hover {
+    background-color: #007bff; /* Blue background when hovered */
+    color: white; /* White text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Button Active Effect (when clicked) */
+.btn-footer:active {
+    background-color: #0056b3; /* Darker blue when clicked */
+    color: white; /* White text color when clicked */
+    transform: scale(0.98); /* Slightly shrink the button */
+}
+
+/* Focus Effect (for keyboard navigation) */
+.btn-footer:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Blue glow effect when focused */
+}
+
+/* Additional Button Effects for Smooth Transitions */
+.btn-footer,
+.btn-advanced {
+    transition: all 0.3s ease; /* Smooth transition for all effects */
+}
+
+/* Button Hover Effects */
+.btn-footer:hover, .btn-advanced:hover {
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for hover effect */
+}
+
+/* Button Active Effects (when clicked) */
+.btn-footer:active, .btn-advanced:active {
+    transform: scale(0.98); /* Slightly shrink the button */
+    box-shadow: none; /* Remove shadow when clicked */
+}
+
+/* Focus Effect for Accessibility (for keyboard navigation) */
+.btn-footer:focus, .btn-advanced:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); /* Blue glow effect when focused */
+}
+
+/* Pop-up Animation for Navbar */
+.navbar-collapse {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-out; /* Add transition for smoothness */
+}
+
+/* Show the navbar when toggled */
+.navbar-collapse.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide-in Animation for "Show More Information" */
+#more-info {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#more-info.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect for the 'Show More Information' button */
+#more-info-btn {
+    background-color: #17a2b8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#more-info-btn:hover {
+    background-color: #138496; /* Darker blue */
+    transform: scale(1.05);
+}
+
+#more-info-btn:active {
+    transform: scale(0.98); /* Shrink when clicked */
+}
